@@ -1,0 +1,18 @@
+
+Project summary 
+Present study analyzes data from a Mayo Clinic trial (1974-1984) that investigated the effectiveness of the drug D-penicillamine for treating Primary Biliary Cirrhosis (PBC), a chronic liver disease. The dataset includes 312 patients, divided into two groups: those who received the drug and those who received a placebo. Current goal is to predict patient outcomes (death, liver transplantation, or censored) based on patient characteristics and treatment status.
+Dataset Size constituent of 312 patients with 19 variables and target variable was status (0: Censored, 1: Liver Transplant, 2: Death)
+Data Preprocessing started with missing values handling using imputation techniques. Dataset was imbalanced, with fewer patients experiencing liver transplants (status 1). This imbalance was addressed through oversampling of the minority class. Outlier were handled using IQR method was used to cap extreme values in continuous variables like.
+
+Modeling Approach
+Multinomial Logistic Regression: This model was used to predict the three possible outcomes (censored, death, liver transplant). The softmax function was applied to normalize the outputs.
+Artificial Neural Network (ANN): A two-layer neural network was implemented, trained using stochastic gradient descent for 20,000 epochs. The ANN model was tuned with learning rate adjustments and feature scaling.
+
+Results
+Logistic Regression Accuracy: 83%
+ANN Accuracy: 92%
+
+The ANN model outperformed logistic regression, capturing more complex relationships between variables and patient outcomes.
+
+Impact
+This analysis contributes to better clinical decision-making, optimizing resource allocation for high-risk patients, and aiding pharmaceutical companies in evaluating drug effectiveness for liver diseases.
